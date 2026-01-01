@@ -46,7 +46,7 @@ The Neumann network is implemented using iterative blocks that combine physics-b
 The initial estimate is obtained using the adjoint of the forward operator:
 
 $$
-\mathbf{B}_0
+{B}_0
 =
 \eta \, \phi^{H} y
 =
