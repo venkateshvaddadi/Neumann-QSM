@@ -1,21 +1,3 @@
-Absolutely 👍
-Below is a **complete, clean Markdown (`README.md`) version** of your **entire LaTeX document**, written so that:
-
-* ✅ It renders correctly on **GitHub**
-* ✅ All equations use **GitHub-supported LaTeX math** (`$$ ... $$`)
-* ✅ Headings, structure, and wording are preserved
-* ✅ No LaTeX-only commands (`\section`, `\paragraph`, `\label`) remain
-
-You can **copy–paste this directly into `README.md`**.
-
----
-
-# Neumann-QSM
-
-**Author:** Venkatesh Vaddadi
-**Date:** January 2026
-
----
 
 ## Neumann Network Formulation for Quantitative Susceptibility Mapping
 
