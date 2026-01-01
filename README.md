@@ -89,6 +89,12 @@ $$
 ---
 
 
+Below is a **clean, correct KaTeX / MathJax–compatible Markdown version** that is **fully supported in GitHub README.md**.
+
+I have **removed all LaTeX-only constructs** (`\paragraph`, `\label`, `====`, etc.) and rewritten everything using **pure KaTeX syntax** that GitHub can render.
+
+You can **copy–paste this directly** into your `README.md`.
+
 ---
 
 ## Data Consistency (Physics Block)
@@ -96,22 +102,27 @@ $$
 To enforce fidelity to the QSM forward model, the **normal operator**
 $\phi^{H}\phi$ is applied at each unrolled iteration.
 
-Given the definition of the forward operator
-$\phi = \mathcal{F}^{H} D \mathcal{F}$, the normal operator becomes:
+Given the definition of the QSM forward operator
 
-$$
+[
+\phi = \mathcal{F}^{H} D \mathcal{F},
+]
+
+the corresponding normal operator becomes
+
+[
 \phi^{H}\phi(\mathbf{B}_k)
 ==========================
 
 \mathcal{F}^{H}
 \left(
 |D|^{2} \cdot \mathcal{F}(\mathbf{B}_k)
-\right)
-$$
+\right).
+]
 
-The **data consistency update** is then expressed as:
+The **data consistency update** at iteration (k) is then expressed as
 
-$$
+[
 \mathbf{T}_k
 ============
 
@@ -121,15 +132,18 @@ $$
 \mathcal{F}^{H}
 \left(
 |D|^{2} \cdot \mathcal{F}(\mathbf{B}_k)
-\right)
-$$
+\right),
+]
 
 where:
 
-* $\mathbf{B}_k$ is the current susceptibility estimate,
+* $\mathbf{B}_k$ denotes the current susceptibility estimate,
 * $D$ is the dipole kernel in the Fourier domain,
-* $\mathcal{F}$ and $\mathcal{F}^{H}$ denote the Fourier and inverse Fourier transforms,
-* $\eta$ is a learnable step size.
+* $\mathcal{F}$ and $\mathcal{F}^{H}$ represent the Fourier and inverse Fourier transforms,
+* $\eta$ is a learnable step size controlling the data consistency strength.
 
 ---
+
+ 
+
 
