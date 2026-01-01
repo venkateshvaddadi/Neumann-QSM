@@ -70,7 +70,7 @@ physics-based data consistency with learned regularization.
 The initial estimate is obtained using the adjoint of the forward operator:
 
 $$
-\mathbf{B}_0 = \eta \, \phi^{H} y
+\mathbf{B}_0 = \eta  \phi^{H} y
 $$
 
 Using the definition of the QSM forward operator  
