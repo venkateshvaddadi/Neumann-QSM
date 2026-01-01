@@ -65,18 +65,17 @@ physics-based data consistency with learned regularization.
 
 ---
 
-#### Initialization
+### Initialization
 
 The initial estimate is obtained using the adjoint of the forward operator:
 
 $$
-\mathbf{B}_0
-=
-\eta \, \phi^{H} y
+\mathbf{B}_0 = \eta \, \phi^{H} y
 $$
 
-Using the definition of the QSM forward operator
-$\phi = \mathcal{F}^{H} D \mathcal{F}$, the initialization can be written as:
+Using the definition of the QSM forward operator  
+$\phi = \mathcal{F}^{H} D \mathcal{F}$,  
+the initialization can be written explicitly as:
 
 $$
 \mathbf{B}_0
