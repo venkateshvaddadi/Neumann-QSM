@@ -95,3 +95,48 @@ where:
 ---
 
 
+## Learned Regularization
+
+A convolutional neural network (CNN), denoted by $\mathcal{R}_{\theta}$, is used as a **learned regularizer** within each unrolled iteration.
+To improve training stability and convergence, the input is normalized using the mean and standard deviation computed from the training data.
+
+The learned regularization is defined as:
+
+$$
+\mathcal{R}_{\theta}(\mathbf{B}_k)
+==================================
+
+\mathcal{D}_{\theta}
+\left(
+\frac{\mathbf{B}_k - \mu}{\sigma}
+\right)\sigma
++
+\mu
+$$
+
+where:
+
+* $\mathcal{D}_{\theta}$ denotes the CNN with learnable parameters $\theta$,
+* $\mu$ and $\sigma$ are the mean and standard deviation of the training data,
+* $\mathbf{B}_k$ is the current susceptibility estimate at iteration $k$.
+
+---
+
+## Iterative Update
+
+The estimate is updated by combining the **physics-based data consistency term** with the **learned regularization term**:
+
+$$
+\mathbf{B}_{k+1}= \mathbf{T}_k- \eta , \mathcal{R}_{\theta}(\mathbf{B}_k)
+$$
+
+where:
+
+* $\mathbf{T}_k$ is the intermediate result after applying the data consistency operation,
+* $\eta$ is a learnable step size,
+* $\mathcal{R}_{\theta}(\mathbf{B}_k)$ represents the CNN-based regularization.
+
+---
+
+
+
