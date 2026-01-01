@@ -113,7 +113,7 @@ where:
 The estimate is updated by combining the **physics-based data consistency term** with the **learned regularization term**:
 
 $$
-\mathbf{B}_{k+1}= \mathbf{T}_k- \eta , \mathcal{R}_{\theta}(\mathbf{B}_k)
+\mathbf{B}_{k+1}= \mathbf{T}_k- \eta \mathcal{R}_{\theta}(\mathbf{B}_k)
 $$
 
 where:
