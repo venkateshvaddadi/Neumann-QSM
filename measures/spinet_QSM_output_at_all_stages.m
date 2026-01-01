@@ -1,0 +1,131 @@
+clc;
+close;
+clear;
+%%
+load('../savedModels/Spinet_QSM_MODELS_dw_QSMnet_loss_l1_lambda_p_trainging/experiments_on_given_data/dw_WideResNet/Nov_06_07_05_pm_model_K_3_given_data_dw_WideResNet_data_source_1/predictions_31/spinet_qsm_output_with_all_stages7-1.mat')
+load('../../QSM_data/data_for_experiments/given_data/raw_data_names_modified/patient_7/cos1.mat')
+%%
+msk=single(msk);
+
+
+
+disp(size(x_0_real(1,1,:,:,80)))
+%%
+temp=figure('Position', [1 1 1600 600],'Visible', 'on');
+title('QSM maps')
+
+subplot(2,4,1)
+colormap('gray')
+imagesc(squeeze(x_0_real(:,1,:,:,80)).*msk(:,:,80),[-0.1,0.1])
+xlabel('x_0')
+colorbar;
+
+subplot(2,4,2)
+colormap('gray')
+imagesc(squeeze(x_1_real(:,1,:,:,80)).*msk(:,:,80),[-0.1,0.1])
+xlabel('x_1')
+colorbar;
+
+subplot(2,4,3)
+colormap('gray')
+imagesc(squeeze(x_2_real(:,1,:,:,80)).*msk(:,:,80),[-0.1,0.1])
+xlabel('x_2')
+colorbar;
+
+
+
+subplot(2,4,4)
+colormap('gray')
+imagesc(squeeze(x_3_real(:,1,:,:,80)).*msk(:,:,80),[-0.1,0.1])
+xlabel('x_3')
+colorbar;
+
+subplot(2,4,5)
+colormap('gray')
+imagesc(squeeze(z_1_real(:,1,:,:,80)).*msk(:,:,80),[-0.1,0.1])
+xlabel('z_1')
+colorbar;
+
+
+subplot(2,4,6)
+colormap('gray')
+imagesc(squeeze(z_2_real(:,1,:,:,80)).*msk(:,:,80),[-0.1,0.1])
+xlabel('z_2')
+colorbar;
+
+
+subplot(2,4,7)
+colormap('gray')
+imagesc(squeeze(z_3_real(:,1,:,:,80)).*msk(:,:,80),[-0.1,0.1])
+xlabel('z_3')
+colorbar;
+
+%%
+figure 
+fileNames={imrotate(squeeze(x_0_real(:,1,:,:,80)),-90),
+    imrotate(squeeze(x_1_real(:,1,:,:,80)),-90),
+    imrotate(squeeze(x_2_real(:,1,:,:,80)),-90),
+    imrotate(squeeze(x_3_real(:,1,:,:,80)),-90)}
+montage(fileNames,"Size",[1 4] ,"DisplayRange",[-0.1 0.1]);
+montage_name=strcat('spinet_qsm_output_with_all_stages_7_1.png')
+
+MyMontage = getframe(gca) 
+imwrite(MyMontage.cdata, montage_name, 'png');
+
+
+%%
+
+disp('x_0')
+x_0_real=squeeze(x_0_real(:,1,:,:,:));
+disp([round(compute_ssim(x_0_real,cos), 4), ...
+    round(compute_psnr(x_0_real,cos),4), ...
+    round(compute_rmse(x_0_real,cos), 4), ...
+    round(compute_hfen(x_0_real,cos), 4)])
+
+disp('z_1')
+z_1_real=squeeze(z_1_real(:,1,:,:,:));
+disp([round(compute_ssim(z_1_real,cos), 4), ...
+    round(compute_psnr(z_1_real,cos),4), ...
+    round(compute_rmse(z_1_real,cos), 4), ...
+    round(compute_hfen(z_1_real,cos), 4)])
+
+disp('x_1')
+x_1_real=squeeze(x_1_real(:,1,:,:,:));
+disp([round(compute_ssim(x_1_real,cos), 4), ...
+    round(compute_psnr(x_1_real,cos),4), ...
+    round(compute_rmse(x_1_real,cos), 4), ...
+    round(compute_hfen(x_1_real,cos), 4)])
+
+disp('z_2')
+z_2_real=squeeze(z_2_real(:,1,:,:,:));
+disp([round(compute_ssim(z_2_real,cos), 4), ...
+    round(compute_psnr(z_2_real,cos),4), ...
+    round(compute_rmse(z_2_real,cos), 4), ...
+    round(compute_hfen(z_2_real,cos), 4)])
+
+disp('x_2')
+
+
+x_2_real=squeeze(x_2_real(:,1,:,:,:));
+disp([round(compute_ssim(x_2_real,cos), 4), ...
+    round(compute_psnr(x_2_real,cos),4), ...
+    round(compute_rmse(x_2_real,cos), 4), ...
+    round(compute_hfen(x_2_real,cos), 4)])
+disp('z_3')
+
+z_3_real=squeeze(z_3_real(:,1,:,:,:));
+disp([round(compute_ssim(z_3_real,cos), 4), ...
+    round(compute_psnr(z_3_real,cos),4), ...
+    round(compute_rmse(z_3_real,cos), 4), ...
+    round(compute_hfen(z_3_real,cos), 4)])
+
+disp('x_3')
+
+x_3_real=squeeze(x_3_real(:,1,:,:,:));
+disp([round(compute_ssim(x_3_real,cos), 4), ...
+    round(compute_psnr(x_3_real,cos),4), ...
+    round(compute_rmse(x_3_real,cos), 4), ...
+    round(compute_hfen(x_3_real,cos), 4)])
+
+
+
