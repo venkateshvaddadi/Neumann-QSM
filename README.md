@@ -70,21 +70,6 @@ D \cdot \mathcal{F}(y)
 
 ---
 
-## 📌 Notes on Fixes Applied
-
-### ❌ Issues in the original snippet
-
-* `============` is **not valid math**
-* `#` breaks math rendering
-* Commas `,` were incorrectly used instead of `=`
-
-### ✅ What was corrected
-
-* Proper equality chain using `=`
-* Single math block using fenced ` ```math ` (recommended for GitHub)
-* Clean, publication-consistent notation
-
----
 
 
 
