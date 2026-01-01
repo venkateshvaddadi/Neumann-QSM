@@ -60,7 +60,8 @@ where
 
 ### Unrolled Network Iterations
 
-The Neumann network is implemented through iterative blocks that combine physics-based data consistency with learned regularization.
+The Neumann network is implemented through iterative blocks that combine
+physics-based data consistency with learned regularization.
 
 ---
 
@@ -70,17 +71,24 @@ The initial estimate is obtained using the adjoint of the forward operator:
 
 $$
 \mathbf{B}_0
-============
+=
+\eta \, \phi^{H} y
+$$
 
-# \eta , \phi^{H} y
+Using the definition of the QSM forward operator
+$\phi = \mathcal{F}^{H} D \mathcal{F}$, the initialization can be written as:
 
-\eta , \mathcal{F}^{H}
+$$
+\mathbf{B}_0
+=
+\eta \, \mathcal{F}^{H}
 \left(
 D \cdot \mathcal{F}(y)
 \right)
 $$
 
 ---
+
 
 #### Data Consistency (Physics Block)
 
