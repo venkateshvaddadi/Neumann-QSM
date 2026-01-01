@@ -24,7 +24,7 @@ You can **copy–paste this directly into `README.md`**.
 Quantitative Susceptibility Mapping (QSM) can be formulated as a linear inverse problem:
 
 $$
-\phi , \chi = y
+\phi \chi = y
 $$
 
 where
