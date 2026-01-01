@@ -49,12 +49,65 @@ where
 ## Unrolled Network Iterations
 
 The Neumann network is implemented through iterative blocks that combine physics-based data consistency with learned regularization.
+Sure 👍
+Below is a **clean, GitHub-ready Markdown version** with **proper math rendering** (MathJax/KaTeX compatible) and **corrected equation formatting**.
+
+This will render correctly on:
+
+* GitHub README (with `$...$` and `$$...$$`)
+* GitHub Pages
+* MkDocs / Docusaurus
+* VS Code Markdown preview (with math extension)
+
+---
+
+## ✅ Corrected Markdown Version (README.md)
 
 ### Initialization
 
 The initial estimate is obtained using the adjoint of the forward operator:
 
-$$
+```math
+\mathbf{B}_0
+=
+\eta \, \phi^{H} y
+=
+\eta \, \mathcal{F}^{H}
+\left(
+D \cdot \mathcal{F}(y)
+\right)
+```
+
+---
+
+## 📌 Notes on Fixes Applied
+
+### ❌ Issues in the original snippet
+
+* `============` is **not valid math**
+* `#` breaks math rendering
+* Commas `,` were incorrectly used instead of `=`
+
+### ✅ What was corrected
+
+* Proper equality chain using `=`
+* Single math block using fenced ` ```math ` (recommended for GitHub)
+* Clean, publication-consistent notation
+
+---
+
+
+
+### Inline math
+```markdown
+The operator is defined as $\phi = \mathcal{F}^H D \mathcal{F}$.
+````
+
+---
+
+## 🧠 Final Output (as it appears)
+
+[
 \mathbf{B}_0
 ============
 
@@ -63,10 +116,20 @@ $$
 \eta , \mathcal{F}^{H}
 \left(
 D \cdot \mathcal{F}(y)
-\right).
-$$
+\right)
+]
 
 ---
+
+If you want, I can also:
+
+* ✅ Convert the **entire Neumann-QSM section** into one polished `README.md`
+* 📊 Add an **ASCII / Mermaid flow diagram** for GitHub
+* 🧩 Provide a **pseudo-code block** that renders nicely in Markdown
+* 🌐 Prepare a **GitHub Pages–ready version**
+
+Just tell me 👍
+
 
 ### Data Consistency (Physics Block)
 
