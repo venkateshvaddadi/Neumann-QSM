@@ -52,16 +52,6 @@ The Neumann network is implemented through iterative blocks that combine physics
 Sure 👍
 Below is a **clean, GitHub-ready Markdown version** with **proper math rendering** (MathJax/KaTeX compatible) and **corrected equation formatting**.
 
-This will render correctly on:
-
-* GitHub README (with `$...$` and `$$...$$`)
-* GitHub Pages
-* MkDocs / Docusaurus
-* VS Code Markdown preview (with math extension)
-
----
-
-## ✅ Corrected Markdown Version (README.md)
 
 ### Initialization
 
