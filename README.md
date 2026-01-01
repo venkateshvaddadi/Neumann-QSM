@@ -98,16 +98,7 @@ To improve training stability and convergence, the input is normalized using the
 
 The learned regularization is defined as:
 
-$$
-\mathcal{R}_{\theta}(\mathbf{B}_k)=
-\mathcal{D}_{\theta}
-\left(
-\frac{\mathbf{B}_k - \mu}{\sigma}
-\right)\sigma
-+
-\mu
-
-$$
+$$ \mathcal{R}_{\theta}(\mathbf{B}_k) = \mathcal{D}_{\theta} \left( \frac{\mathbf{B}_k - \mu}{\sigma} \right)\sigma + \mu $$
 
 where:
 
