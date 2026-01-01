@@ -79,15 +79,10 @@ $$ \phi = \mathcal{F}^{H} D \mathcal{F} $$
 
 the corresponding normal operator becomes
 
-[
 \phi^{H}\phi(\mathbf{B}_k)
 ==========================
 
-\mathcal{F}^{H}
-\left(
-|D|^{2} \cdot \mathcal{F}(\mathbf{B}_k)
-\right).
-]
+$$ \mathcal{F}^{H} \left( |D|^{2} \cdot \mathcal{F}(\mathbf{B}_k) \right)$$
 
 The **data consistency update** at iteration (k) is then expressed as
 
