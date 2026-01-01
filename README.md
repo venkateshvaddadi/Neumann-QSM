@@ -75,9 +75,7 @@ $\phi^{H}\phi$ is applied at each unrolled iteration.
 
 Given the definition of the QSM forward operator
 
-[
-\phi = \mathcal{F}^{H} D \mathcal{F},
-]
+$$ \phi = \mathcal{F}^{H} D \mathcal{F} $$
 
 the corresponding normal operator becomes
 
