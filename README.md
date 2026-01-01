@@ -89,9 +89,27 @@ $$
 ---
 
 
-#### Data Consistency (Physics Block)
+---
 
-To enforce fidelity to the forward model, the normal operator $\phi^{H}\phi$ is applied:
+## Data Consistency (Physics Block)
+
+To enforce fidelity to the QSM forward model, the **normal operator**
+$\phi^{H}\phi$ is applied at each unrolled iteration.
+
+Given the definition of the forward operator
+$\phi = \mathcal{F}^{H} D \mathcal{F}$, the normal operator becomes:
+
+$$
+\phi^{H}\phi(\mathbf{B}_k)
+==========================
+
+\mathcal{F}^{H}
+\left(
+|D|^{2} \cdot \mathcal{F}(\mathbf{B}_k)
+\right)
+$$
+
+The **data consistency update** is then expressed as:
 
 $$
 \mathbf{T}_k
@@ -99,58 +117,19 @@ $$
 
 ## \mathbf{B}_k
 
-\eta , \mathcal{F}^{H}
+\eta ,
+\mathcal{F}^{H}
 \left(
 |D|^{2} \cdot \mathcal{F}(\mathbf{B}_k)
 \right)
 $$
 
----
+where:
 
-#### Learned Regularization
-
-A convolutional neural network (CNN), denoted by $\mathcal{R}_{\theta}$, acts as a learned regularizer. To improve training stability, normalization is applied:
-
-$$
-\mathcal{R}_{\theta}(\mathbf{B}_k)
-==================================
-
-\mathcal{D}_{\theta}
-\left(
-\frac{\mathbf{B}_k - \mu}{\sigma}
-\right)\sigma + \mu
-$$
-
-where
-
-* $\mu$ and $\sigma$ are the mean and standard deviation computed from the training data.
+* $\mathbf{B}_k$ is the current susceptibility estimate,
+* $D$ is the dipole kernel in the Fourier domain,
+* $\mathcal{F}$ and $\mathcal{F}^{H}$ denote the Fourier and inverse Fourier transforms,
+* $\eta$ is a learnable step size.
 
 ---
-
-#### Iterative Update
-
-The update rule for each unrolled iteration is given by:
-
-$$
-\mathbf{B}_{k+1}
-================
-
-## \mathbf{T}_k
-
-\eta , \mathcal{R}_{\theta}(\mathbf{B}_k)
-$$
-
----
-
-### Final Reconstruction
-
-Following the Neumann series formulation, the final susceptibility map is obtained by aggregating all intermediate estimates:
-
-$$
-\hat{\chi}
-==========
-
-\sum_{k=0}^{K}
-\mathbf{B}_k
-$$
 
