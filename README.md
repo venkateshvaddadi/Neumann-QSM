@@ -123,6 +123,11 @@ where:
 * $\mathcal{R}_{\theta}(\mathbf{B}_k)$ represents the CNN-based regularization.
 
 ---
+## Final Reconstruction
+
+Following the Neumann series formulation, the final susceptibility map is obtained by aggregating all intermediate estimates:
+
+$$ \hat{\chi} = \sum_{k=0}^{K} \mathbf{B}_k $$
 
 
 
