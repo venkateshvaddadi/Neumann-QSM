@@ -72,4 +72,34 @@ D \cdot \mathcal{F}(y)
 
 
 
+## Data Consistency (Physics Block)
+
+To enforce fidelity to the QSM forward model, the **normal operator**
+(\phi^{H}\phi) is applied at each iteration.
+
+The data-consistency update is defined as:
+
+```math
+\mathbf{T}_k
+=
+\mathbf{B}_k
+-
+\eta \, \mathcal{F}^{H}
+\left(
+|D|^{2} \cdot \mathcal{F}(\mathbf{B}_k)
+\right)
+```
+
+### Explanation
+
+* (\mathbf{B}_k): Current estimate of the susceptibility-related field
+* (\eta): Learnable step size
+* (\mathcal{F}(\cdot)), (\mathcal{F}^{H}(\cdot)): Fourier and inverse Fourier transforms
+* (D): Dipole kernel in the Fourier domain
+* (|D|^2): Magnitude-squared dipole kernel, corresponding to the normal operator
+* (\mathbf{T}_k): Intermediate estimate after enforcing data consistency
+
+This step ensures that the current estimate remains consistent with the physical QSM forward model before applying learned regularization.
+
+---
 
