@@ -28,10 +28,7 @@ Here, $\mathcal{F}$ and $\mathcal{F}^{H}$ denote the Fourier and inverse Fourier
 Direct inversion of $\phi$ is ill-posed due to the zeros of the dipole kernel. Instead, the inverse can be approximated using a truncated Neumann series expansion. The susceptibility map is expressed as:
 
 $$
-\chi \approx \sum_{k=0}^{K}
-\left( I - \eta \phi^{H}\phi \right)^{k}
-\left( \eta \phi^{H} y \right)
-$$
+\chi \approx \sum_{k=0}^{K} \left( I - \eta \phi^{H}\phi \right)^{k} \left( \eta \phi^{H} y \right) $$
 
 where
 
