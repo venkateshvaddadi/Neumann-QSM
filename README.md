@@ -60,7 +60,7 @@ $\phi = \mathcal{F}^{H} D \mathcal{F}$,
 the initialization can be written explicitly as:
 
 $$
-\mathbf{B}_0 = \eta \, \mathcal{F}^{H} \left( D \cdot \mathcal{F}(y) \right)
+\mathbf{B}_0 = \eta  \mathcal{F}^{H} \left( D \cdot \mathcal{F}(y) \right)
 $$
 
 ---
