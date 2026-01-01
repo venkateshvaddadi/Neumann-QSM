@@ -99,12 +99,7 @@ The **data consistency update** at iteration (k) is then expressed as
 
 ## \mathbf{B}_k
 
-\eta ,
-\mathcal{F}^{H}
-\left(
-|D|^{2} \cdot \mathcal{F}(\mathbf{B}_k)
-\right),
-]
+\eta ,\mathcal{F}^{H} \left( |D|^{2} \cdot \mathcal{F}(\mathbf{B}_k) \right), ]
 
 where:
 
