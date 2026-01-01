@@ -84,7 +84,7 @@ $$\phi^{H}\phi(\mathbf{B}_k)= \mathcal{F}^{H} \left( |D|^{2} \cdot \mathcal{F}(\
 The **data consistency update** at iteration (k) is then expressed as
 
 
-$$\mathbf{T}_k=\mathbf{B}_k=\eta \mathcal{F}^{H} \left( |D|^{2} \cdot \mathcal{F}(\mathbf{B}_k) \right)$$
+$$\mathbf{T}_k=\mathbf{B}_k-\eta \mathcal{F}^{H} \left( |D|^{2} \cdot \mathcal{F}(\mathbf{B}_k) \right)$$
 where:
 
 * $\mathbf{B}_k$ denotes the current susceptibility estimate,
